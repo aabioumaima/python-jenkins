@@ -19,7 +19,7 @@ if __name__ == "__main__":
     
     print("Server started at http://localhost:8000/metrics")
     
-    # Simulate processing requests indefinitely
+    # Simulatee processing requests indefinitely
     while True:
         process_request()
 
