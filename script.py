@@ -1,1 +1,4 @@
-print("We have deleted everything and now we are okay with this!")
+# script.py
+def add(a, b):
+    return a + b
+
