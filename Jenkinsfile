@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Execute Python script
-                sh 'python your_script.py'
+                sh 'python3 script.py'
             }
         }
     }
@@ -20,11 +20,11 @@ pipeline {
     post {
         success {
             // Notify on success
-            slackSend(color: 'good', message: "Pipeline successful!", channel: '#your-channel')
+            slackSend(color: 'good', message: "Pipeline successful!", channel: '#sending-notifications')
         }
         failure {
             // Notify on failure
-            slackSend(color: 'danger', message: "Pipeline failed!", channel: '#your-channel')
+            slackSend(color: 'danger', message: "Pipeline failed!", channel: '#sending-notifications')
         }
     }
 }
@@ -34,7 +34,7 @@ def slackSend(def color, def message, def channel) {
         color: color,
         message: message,
         channel: channel,
-        tokenCredentialId: 'your-slack-token-credential-id'
+        tokenCredentialId: 'U05eNBeTfzexuZaxxOGvPUiN'
     )
 }
 
